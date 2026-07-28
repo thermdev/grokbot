@@ -185,6 +185,16 @@ async def ask(ctx: commands.Context, *, message):
     interaction = bot.ai.interactions.create(model="gemini-3.6-flash", input=message)
     await ctx.send(interaction.output_text)
 
+@bot.tree.command(name="kill", description="Emergency killswitch.")
+async def kill(interaction: discord.Interaction):
+    if interaction.user.id != int(os.environ['MY_USER_ID']):
+        await interaction.response.send_message("No.")
+        return
+    else:
+        await interaction.response.send_message("Goodbye.")
+        await bot.close()
+
+
 discord.utils.setup_logging(level=logging.DEBUG if debug else logging.INFO)
 load_dotenv()
 bot.run(os.environ['BOT_TOKEN'])
