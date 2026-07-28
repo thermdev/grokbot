@@ -87,6 +87,7 @@ async def on_message(message: discord.Message):
             response = random.choice(possible_responses)
         else:
             logging.info("ai time!")
+            
             input = message.content.replace(message.mentions[0].mention, "Grok")
             payload = f"""
 This is context for a Discord conversation. The person {message.author} is inquiring to you, Grok, about {who}'s message.

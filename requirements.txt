@@ -6,7 +6,7 @@ aiodns=3.6.1=py314hca03da5_0
 aiohappyeyeballs=2.6.2=py314hca03da5_0
 aiohttp=3.14.1=py314haa24f5a_0
 aiosignal=1.4.0=py314hca03da5_0
-annotated-types=0.7.0=pyhd8ed1ab_1
+annotated-types=0.8.0=pyhd8ed1ab_0
 anyio=4.14.2=pyhcf101f3_0
 apeye=1.4.1=py_0
 apeye-core=1.1.5=py_0
